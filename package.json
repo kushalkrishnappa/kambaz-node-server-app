@@ -1,0 +1,24 @@
+{
+  "name": "kambaz-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web server for the Kambaz application",
+  "homepage": "https://github.com/Andis-08/kambaz-node-server-app#readme",
+  "bugs": {
+    "url": "https://github.com/Andis-08/kambaz-node-server-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andis-08/kambaz-node-server-app.git"
+  },
+  "license": "ISC",
+  "author": "Anirudh Nitin Bakare",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
