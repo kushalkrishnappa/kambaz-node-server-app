@@ -1,5 +1,4 @@
 import UsersDao from "./dao.js";
-// let currentUser = null;
 export default function UserRoutes(app, db) {
   const dao = UsersDao(db);
   const createUser = (req, res) => {};
