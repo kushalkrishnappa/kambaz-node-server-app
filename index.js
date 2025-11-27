@@ -15,12 +15,19 @@ import EnrollmentsRoutes from "./Kambaz/Enrollments/routes.js";
 const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz";
 mongoose.connect(CONNECTION_STRING);
 const app = express();
+
+// Parse JSON bodies - MUST come first
+app.use(express.json());
+
+// CORS configuration - MUST come before session
 app.use(
   cors({
     credentials: true,
     origin: process.env.CLIENT_URL || "http://localhost:3000",
   })
 );
+
+// Session configuration
 const sessionOptions = {
   secret: process.env.SESSION_SECRET || "kambaz",
   resave: false,
@@ -35,8 +42,6 @@ if (process.env.SERVER_ENV !== "development") {
   };
 }
 app.use(session(sessionOptions));
-
-app.use(express.json());
 Hello(app);
 Lab5(app);
 
