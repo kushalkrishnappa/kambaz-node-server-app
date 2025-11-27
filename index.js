@@ -16,10 +16,8 @@ const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://1
 mongoose.connect(CONNECTION_STRING);
 const app = express();
 
-// Parse JSON bodies - MUST come first
 app.use(express.json());
 
-// CORS configuration - MUST come before session
 app.use(
   cors({
     credentials: true,
