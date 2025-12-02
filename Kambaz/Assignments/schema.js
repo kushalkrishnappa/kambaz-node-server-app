@@ -11,6 +11,17 @@ const schema = new mongoose.Schema(
     points: Number,
     modules: [String],
     description: String,
+    assignmentGroup: String,
+    displayGradeAs: String,
+    submissionType: String,
+    onlineEntryOptions: {
+      textEntry: Boolean,
+      websiteUrl: Boolean,
+      mediaRecordings: Boolean,
+      studentAnnotation: Boolean,
+      fileUpload: Boolean,
+    },
+    assignTo: [String],
   },
   { collection: "assignments" }
 );
